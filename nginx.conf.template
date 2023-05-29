@@ -9,7 +9,7 @@ http {
     listen ${NGINX_PORT};
     location / {
       add_header Set-Cookie "${NGINX_COOKIE_NAME}=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT";
-      return 302 '${NGINX_REDIRECT_URI}';
+      return 302 ${NGINX_REDIRECT_URI};
     }
   }
 }
